@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Order - Delivery</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <style>
+        #card>div{
+            margin-top: 18%;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav id="navbar"></nav>
+
+    <!-- body -->
+    <div id="bottom">
+        <h2>CHOOSE YOUR SHIPPING METHOD</h2>
+        <h3>IN-STORE PICK UP</h3>   
+    </div>
+
+    <div id="card">
+        <div>
+            <div id="price">TOTAL :  <span>2,290.00</span></div>
+            <button onclick="window.location.href = 'payment.html' ">CONTINUE</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="module"> 
+    import navbar from "./components/navbar.js";
+    let nav = document.getElementById("navbar");
+    nav.innerHTML = navbar();
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Order - Summary</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <style>
+        #cards{
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            width: 100%;
+            height: 80px;
+            /* position: sticky; */
+            margin-top: 30%;
+        }
+        #pr{
+            display: flex;
+        }
+        #check{
+            margin-left: 90px;
+            margin-top: 20px;
+        }
+        span{
+            font-size: 9px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+    <nav id="navbar"></nav>
+    
+    <div id="cards">
+        <div id="check">
+            <input type="checkbox">
+            <span>I ACCEPT THE <u>TERMS OF PURCHASE</u> AND <u>PRIVACY POLICY</u></span>
+        </div>
+        <div id="pr">
+            <div id="price">TOTAL :  <span>2,290.00</span></div>
+            <button onclick="window.location.href = 'summary.html' ">CONTINUE</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="module">
+    import navbar from "./components/navbar.js";
+    let nav = document.getElementById("navbar");
+    nav.innerHTML = navbar();
+</script>
