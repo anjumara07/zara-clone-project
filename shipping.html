@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process Order - Delivery</title>
     <link rel="stylesheet" href="./styles/navbar.css">
-    <style>
-        #card>div{
-            margin-top: 18%;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/shipping.css">
 </head>
 <body>
     <!-- navbar -->
@@ -19,7 +15,21 @@
     <!-- body -->
     <div id="bottom">
         <h2>CHOOSE YOUR SHIPPING METHOD</h2>
-        <h3>IN-STORE PICK UP</h3>   
+        <h3>IN-STORE PICK UP</h3> 
+        <div id="store">
+            <p><input type="radio">MONDAY 24, JANUARY - WEDNESDAY 26, JANUARY</p>
+            <p>FREE</p>
+        </div>  
+        <h3>HOME DELIVERY</h3>
+        <div id="home">
+            <p>WEDNESDAY 26, JANUARY - MONDAY 31, JANUARY <span>290.00</span></p>
+            <input type="radio">
+            <div>
+                <p style="color: rgb(170, 169, 169);">TRANSPORT RESTRICTIONS MAY APPLY TO SOME AREAS</p>
+                <p style="color: rgb(170, 169, 169);">FREE SHIPPING FOR ORDERS OVER ₹ 2,990</p>
+                <a href="" style="color: rgb(121, 120, 120);">DELIVERY TIME FRAMES</a>
+            </div>
+        </div>
     </div>
 
     <div id="card">
@@ -35,4 +45,6 @@
     import navbar from "./components/navbar.js";
     let nav = document.getElementById("navbar");
     nav.innerHTML = navbar();
+
+    
 </script>
