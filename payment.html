@@ -19,7 +19,7 @@
     </div>
 
     <div id="boxes">
-        <div>
+        <div id="visa">
             <img src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg" alt="">
             <p>VISA</p>
         </div>
@@ -58,7 +58,7 @@
     <div id="card">
         <div>
             <div id="price">TOTAL :  <span>2,290.00</span></div>
-            <button onclick="window.location.href = 'summary.html' ">CONTINUE</button>
+            <button onclick="window.location.href = 'cardPayment.html' ">CONTINUE</button>
         </div>
     </div>
 </body>
@@ -68,4 +68,9 @@
     import navbar from "./components/navbar.js";
     let nav = document.getElementById("navbar");
     nav.innerHTML = navbar();
+
+    let visa = document.getElementById("visa")
+    visa.addEventListener("click",function(){
+        visa.style.border = "2px solid black";
+    })
 </script>
