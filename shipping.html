@@ -7,6 +7,7 @@
     <title>Process Order - Delivery</title>
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/shipping.css">
+    <link rel="stylesheet" href="./styles/footer.css" />
 </head>
 <body>
     <!-- navbar -->
@@ -32,12 +33,14 @@
         </div>
     </div>
 
-    <div id="card">
+    <div id="cards">
         <div>
             <div id="price">TOTAL :  <span>2,290.00</span></div>
             <button onclick="window.location.href = 'payment.html' ">CONTINUE</button>
         </div>
     </div>
+
+    <div id="footer"></div>
 </body>
 </html>
 
@@ -46,5 +49,8 @@
     let nav = document.getElementById("navbar");
     nav.innerHTML = navbar();
 
+    import { footers } from "./components/footer.js";
+    let footer = document.getElementById("footer");
+    footer.innerHTML = footers();
     
 </script>
