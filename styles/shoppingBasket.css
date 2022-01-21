@@ -106,12 +106,35 @@ nav{
     margin-top: 20px;
 }
 
-/* @media screen and (max-width:796px){
-#card{
-    border: 1px solid black;
+@media only screen and (min-width: 375px) and (max-width: 768px){
 
-} */
+    #card>div{
+        display: flex;
+        margin-left: 48%;
+    }
+    #help{
+        width: 15%;
+        font-size: 13px;
+    }
+}
 
-
-
+@media only screen and (min-width: 0px) and (max-width: 390px){
+    #items{
+        display: block;
+        margin-left: 10%;
+    }
+    #items>div{
+        margin-bottom: 40px;
+        width: 330px;
+    }
+    #card{
+        border-top: 2px solid black;
+    }
+    #card>div{
+        margin-left: 10%;
+    }
+    #help{
+        width: 27%;
+        margin-right: 2%;
+    }
 }

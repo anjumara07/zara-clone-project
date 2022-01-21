@@ -30,3 +30,30 @@ form>input{
     margin-right: 30px;
     margin-top: 40px;
 }
+
+@media only screen and (min-width:375px) and (max-width:768px){
+ 
+    #cards{
+        margin-top: 400px;
+    }
+    #pr{
+        margin-left: 50%;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:390px){
+    #cards{
+        margin-top: 240px;
+        border-top: 2px solid black;
+    }
+    #pr{
+        margin-left: 15%;
+    }
+    #bottom>img{
+        width: 90px;
+    }
+    form>input{
+        width: 35%;
+        font-size: 12px;
+    }
+}
