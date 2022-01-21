@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MEN'S SHOES | ZARA</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       * {
@@ -33,9 +33,9 @@
         </div>
         <div class="navbox3">
           <p class="menu_logo">VIEW ALL</p>
-          <p class="menu_logo">PLAIN</p>
-          <p class="menu_logo">PRINTED</p>
-          <p class="menu_logo">SHORT SLEEVE</p>
+          <p class="menu_logo">BOOTS</p>
+          <p class="menu_logo">SNEAKERS</p>
+          <p class="menu_logo">LOAFERS</p>
         </div>
         <div class="navbox4">
           <p class="search1">SEARCH</p>
@@ -67,167 +67,62 @@
 </html>
 
 <script>
-  var data = [
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2216/820/001/2/w/439/2216820001_6_1_1.jpg?ts=1625150699838",
-      prod_discount: "40% OFF",
-      prod_name: "MULTI-PIECE SNEAKERS",
-      strikedOffPrice: "₹ 3,590.00",
-      price: "₹ 1,990.00",
-      description:
-        "WHITE RETRO SNEAKERS. LAYERED PIECES ON THE UPPER. BLACK PULL TAB ON THE TONGUE. SEVEN-EYELET FACING. CHUNKY BLACK SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2261/820/001/2/w/444/2261820001_6_1_1.jpg?ts=1629973896360",
-      prod_discount: "30% OFF",
-      prod_name: "WHITE MULTI-PIECE SNEAKERS",
-      strikedOffPrice: "₹ 2,990.00",
-      price: "₹ 1,990.00",
-      description:
-        "WHITE RETRO SNEAKERS. LAYERED PIECES ON THE UPPER. FEATURING A PIECE DETAIL ON THE HEEL AND ON THE LAST EYELET OF THE FACING. MATCHING, VOLUMINOUS RETRO SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2268/820/040/2/w/444/2268820040_6_1_1.jpg?ts=1630313324098",
-      prod_discount: "30% OFF",
-      prod_name: "RETRO MULTI-PIECE SNEAKERS",
-      strikedOffPrice: "₹ 2,990.00",
-      price: "₹ 1,990.00",
-      description:
-        "SNEAKERS ARE AVAILABLE IN TWO COLOURS. MULTIPLE PIECES AND CONTRAST COLOUR ON THE UPPER. SIX EYELETS FACING. RETRO CARAMEL SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2203/820/040/2/w/444/2203820040_6_1_1.jpg?ts=1625757696740",
-      prod_discount: "30% OFF",
-      prod_name: "SNEAKERS WITH TOPSTITCHING",
-      strikedOffPrice: "₹ 2,990.00",
-      price: "₹ 1,990.00",
-      description:
-        "BLACK SNEAKERS. CONTRAST WHITE TOPSTITCHING ON THE UPPER. SIX-EYELET FACING. CHUNKY WHITE SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2340/821/202/2/w/444/2340821202_6_1_1.jpg?ts=1635430400399",
-      prod_discount: "35% OFF",
-      prod_name: "OrthoLite® INSOLE TRAINERS",
-      strikedOffPrice: "₹ 3,990.00",
-      price: "₹ 2,490.00",
-      description:
-        "MOUNTAIN-STYLE TRAINERS WITH ORTHOLITE® INSOLE THAT PROVIDES GREATER COMFORT AND CUSHION. RESISTANT TO SWEAT AND ODOURS. FOUR-EYELET FACING WITH AN ELASTIC AND SPORTY FIT. TRACK SOLE WITH A TREK-STYLE",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2212/720/040/2/w/444/2212720040_6_1_1.jpg?ts=1625211383017",
-      prod_discount: "40% OFF",
-      prod_name: "LEATHER SNEAKERS WITH THICK SOLE",
-      strikedOffPrice: "₹ 4,990.00",
-      price: "₹ 2,990.00",
-      description:
-        "BLACK LEATHER SNEAKERS. LAYERED MATERIALS ON THE UPPER. SIX-EYELET FACING. CHUNKY WHITE SOLE WITH BROWN OUTSOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2201/820/203/2/w/444/2201820203_15_2_1.jpg?ts=1626253165134",
-      prod_discount: "30% OFF",
-      prod_name: "CONTRAST TRAINERS",
-      strikedOffPrice: "₹ 2,990.00",
-      price: "₹ 1,990.00",
-      description:
-        "RUNNING TRAINERS AVAILABLE IN THREE COLOUR COMBINATIONS. LAYERED CONTRAST-COLOURED PIECES ON THE UPPER. SEVEN-EYELET FACING. WHITE SOLE. RETRO SPORTY STYLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2306/820/202/2/w/444/2306820202_6_1_1.jpg?ts=1629881166608",
-      prod_discount: "35% OFF",
-      prod_name: "TREK SNEAKERS",
-      strikedOffPrice: "₹ 3,990.00",
-      price: "₹ 2,490.00",
-      description:
-        "LACE-UP SNEAKERS IN A COMBINATION OF COLOURS. FIVE-EYELET FACING. LAYERED MATERIALS ON THE UPPER. PULL TAB ON THE TONGUE. RAISED BEIGE CHUNKY SOLE WITH TRACK SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2205/820/001/2/w/444/2205820001_6_1_1.jpg?ts=1621344686951",
-      prod_discount: "30% OFF",
-      prod_name: "MONOCHROME SNEAKERS",
-      strikedOffPrice: "₹ 2,990.00",
-      price: "₹ 1,990.00",
-      description:
-        "SNEAKERS WITH MATCHING TOPSTITCHING DETAIL ON THE UPPER AND CONTRAST PIECE ON THE BACK. SEVEN-EYELET FACING. WHITE SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2256/720/001/2/w/444/2256720001_6_1_1.jpg?ts=1635417929559",
-      prod_discount: "30% OFF",
-      prod_name: "RETRO SNEAKERS",
-      strikedOffPrice: "₹ 2,990.00",
-      price: "₹ 1,990.00",
-      description:
-        "RETRO-STYLE SNEAKERS WITH MULTIWAY PIECES ON THE UPPER. DECORATIVE SEAMS ON THE WELT. SEVEN-EYELET FACING. CREAM-COLOURED SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2121/822/092/2/w/444/2121822092_6_1_1.jpg?ts=1635508326451",
-      prod_discount: "35% OFF",
-      prod_name: "METALLIC HIGH-TOP SNEAKERS",
-      strikedOffPrice: "₹ 3,990.00",
-      price: "₹ 2,490.00",
-      description:
-        "RETRO HIGH-TOP SNEAKERS. SILVER MULTIWAY PIECES ON THE UPPER AND QUILTED UPPER. BLACK AND WHITE SOLE.",
-    },
-    {
-      imgUrl:
-        "https://static.zara.net/photos///2021/I/1/2/p/2206/820/032/2/w/444/2206820032_6_1_1.jpg?ts=1624616764196",
-      prod_discount: "30% OFF",
-      prod_name: "CONTRAST SNEAKERS",
-      strikedOffPrice: "₹ 2,990.00",
-      price: "₹ 1,990.00",
-      description:
-        "DARK BROWN SNEAKERS. CONTRAST BLACK STRIPES ON THE BOTTOM AND PULL TAB AT THE BACK. SIX-EYELET FACING. WHITE SOLE WITH BLACK STRIPE AT THE BACK.",
-    },
-  ];
+  async function getdata() {
+    try {
+      let res = await fetch("data.json");
 
-  data.map(function (elem) {
-    var mainDiv = document.createElement("div");
-    mainDiv.setAttribute("id", "main_div2");
+      let data = await res.json();
+      let newdata = data.mensShoes;
+      appenddata(newdata);
 
-    var img = document.createElement("img");
-    img.setAttribute("src", elem.imgUrl);
-    img.setAttribute("id", "product_image");
+      console.log("data:", data);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
 
-    var aTag = document.createElement("a");
-    aTag.setAttribute("href", "product2.html");
+  getdata();
 
-    var buy_btn = document.createElement("button");
-    buy_btn.textContent = "Buy Now";
-    aTag.innerHTML = "<button>Buy Now</button>";
-    // buy_btn.setAttribute("id","buy_btn1")
+  function appenddata(arr) {
+    arr.forEach((elem) => {
+      let mainDiv = document.createElement("div");
+      mainDiv.setAttribute("id", "main_div2");
 
-    var discount = document.createElement("p");
-    discount.textContent = elem.prod_discount;
+      let img = document.createElement("img");
+      img.setAttribute("src", elem.imgUrl);
+      img.setAttribute("id", "product_image");
 
-    var prod_name = document.createElement("P");
-    prod_name.textContent = elem.prod_name;
-    prod_name.setAttribute("id", "item_name");
+      let aTag = document.createElement("a");
+      aTag.setAttribute("href", "product2.html");
 
-    var smallDiv = document.createElement("div");
-    smallDiv.setAttribute("id", "small_div");
+      let buy_btn = document.createElement("button");
+      buy_btn.textContent = "Buy Now";
+      aTag.innerHTML = "<button>Buy Now</button>";
+      // buy_btn.setAttribute("id","buy_btn1")
 
-    var price = document.createElement("p");
-    price.textContent = elem.price;
-    price.setAttribute("id", "actual_price");
+      let discount = document.createElement("p");
+      discount.textContent = elem.prod_discount;
 
-    var strikedOffPrice = document.createElement("p");
-    strikedOffPrice.textContent = elem.strikedOffPrice;
-    strikedOffPrice.setAttribute("id", "strike");
+      let prod_name = document.createElement("P");
+      prod_name.textContent = elem.prod_name;
+      prod_name.setAttribute("id", "item_name");
 
-    smallDiv.append(strikedOffPrice, price);
+      let smallDiv = document.createElement("div");
+      smallDiv.setAttribute("id", "small_div");
 
-    mainDiv.append(img, discount, prod_name, smallDiv, aTag);
+      let price = document.createElement("p");
+      price.textContent = elem.price;
+      price.setAttribute("id", "actual_price");
 
-    document.getElementById("body_div").append(mainDiv);
-  });
+      let strikedOffPrice = document.createElement("p");
+      strikedOffPrice.textContent = elem.strikedOffPrice;
+      strikedOffPrice.setAttribute("id", "strike");
+
+      smallDiv.append(strikedOffPrice, price);
+
+      mainDiv.append(img, discount, prod_name, smallDiv, aTag);
+
+      document.getElementById("body_div").append(mainDiv);
+    });
+  }
 </script>
