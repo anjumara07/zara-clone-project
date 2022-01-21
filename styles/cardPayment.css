@@ -4,7 +4,7 @@
     background-color: white;
     width: 100%;
     height: 80px;
-    /* position: sticky; */
+    position: fixed;
     margin-top: 4%;
 }
 #pr{
@@ -34,7 +34,7 @@ form>input{
 @media only screen and (min-width:375px) and (max-width:768px){
  
     #cards{
-        margin-top: 400px;
+        margin-top: 490px;
     }
     #pr{
         margin-left: 50%;
@@ -43,7 +43,7 @@ form>input{
 
 @media only screen and (min-width:0px) and (max-width:390px){
     #cards{
-        margin-top: 240px;
+        margin-top: 245px;
         border-top: 2px solid black;
     }
     #pr{

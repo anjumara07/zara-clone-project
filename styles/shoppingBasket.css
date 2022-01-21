@@ -87,7 +87,7 @@ nav{
     background-color: white;
     width: 99%;
     height: 80px;
-    position: sticky;
+    position: fixed;
     bottom: 0%;
 }
 #card>div>button{
@@ -129,6 +129,7 @@ nav{
     }
     #card{
         border-top: 2px solid black;
+        position: fixed;
     }
     #card>div{
         margin-left: 10%;

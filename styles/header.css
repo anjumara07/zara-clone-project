@@ -170,9 +170,9 @@ nav ul ul li a {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin-top: 3%;
+  width: 100%;
+  /* position: relative; */
+  margin-top: 5%;
   height: 30%;
   width: 45%;
   margin-left: 35%;
@@ -245,14 +245,29 @@ nav ul ul li a {
   .next,
   .text {
     font-size: 11px;
-  }
+  }  
 }
 
 @media only screen and (max-width: 1200px) {
   #bookVdo {
     transform: rotateZ(90deg);
-    width: 650px;
+    width: 750px;
     height: 700px;
+  }
+  .slideshow-container {
+    width: 80%;
+    /* position: relative; */
+    margin-top: 10%;
+    font-size: 20px;
+    height: 700px;
+    margin-left: 25%;
+    margin-bottom: 15%;
+  }
+  .rightoptions p,#search-input{
+    font-size: 20px;
+  }
+  #footer a{
+    font-size: 13px;
   }
 }
 #sale {

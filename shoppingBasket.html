@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./styles/shoppingBasket.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
   </head>
   <body>
     <nav>
@@ -44,13 +45,15 @@
       </div>
     </div>
 
-    <!-- <div>
-    
-    </div> -->
+    <div id="footer"></div>
   </body>
 </html>
 
-<script>
+<script type="module">
+  import { footers } from "./components/footer.js";
+  let footer = document.getElementById("footer");
+  footer.innerHTML = footers();
+
   // var data = JSON.parse(localStorage.getItem("cartZara")) || [];
 
   var data = [
