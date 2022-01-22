@@ -20,38 +20,18 @@
     <div id="main">
       <div id="left"></div>
 
-      <div id="right">
-        <h4>DELIVERY THURSDAY 27, JANUARY - TUESDAY 01, FEBRUARY</h4>
-        <div>
-          <p>1 ITEM</p>
-          <img
-            src="https://static.zara.net/photos///2021/I/1/2/p/2261/820/001/2/w/444/2261820001_6_1_1.jpg?ts=1629973896360"
-            alt=""
-          />
-        </div>
-        <div>
-          <p>1 ITEM</p>
-          <img
-            src="https://static.zara.net/photos///2021/I/1/2/p/2261/820/001/2/w/444/2261820001_6_1_1.jpg?ts=1629973896360"
-            alt=""
-          />
-        </div>
-      </div>
+        <div id="right"></div>
     </div>
 
     <div id="cards">
-      <div id="check">
-        <input id="check" type="checkbox" />
-        <span
-          >I ACCEPT THE <u>TERMS OF PURCHASE</u> AND <u>PRIVACY POLICY</u></span
-        >
-      </div>
-      <div id="pr">
-        <div id="price">TOTAL : <span>2,290.00</span></div>
-        <button onclick="window.location.href = 'summary.html' ">
-          CONTINUE
-        </button>
-      </div>
+        <div id="check">
+            <input id="check" type="checkbox">
+            <span>I ACCEPT THE <u>TERMS OF PURCHASE</u> AND <u>PRIVACY POLICY</u></span>
+        </div>
+        <div id="pr">
+            <div id="price">TOTAL :  <span>2,290.00</span></div>
+            <button id="done">CONTINUE</button>
+        </div>
     </div>
 
     <div id="footer"></div>
@@ -66,12 +46,14 @@
   let nav = document.getElementById("navbar");
   nav.innerHTML = navbar();
 
-  import { footers } from "./components/footer.js";
-  let footer = document.getElementById("footer");
-  footer.innerHTML = footers();
+    let userData = JSON.parse(localStorage.getItem("userDataBase"));
+    let cartItem = JSON.parse(localStorage.getItem("cart"));
+    appendUserDetails(userData,cartItem)
 
-  let userData = JSON.parse(localStorage.getItem("userDataBase"));
-  appendUserDetails(userData);
+    function appendUserDetails(userData,cartItem){
+        let data = userData[userData.length-1];
+        let leftContainer = document.getElementById("left");
+        leftContainer.innerHTML = ""
 
   function appendUserDetails(userData) {
     let data = userData[userData.length - 1];
@@ -93,6 +75,25 @@
                 <p>${data.tel}</p>
             </div>
             <h4 style="margin-top: 60px;">PAYMENT</h4>
-            <p><u>EDIT</u></p>`;
-  }
+            <p><u>EDIT</u></p>`
+
+
+        let rightContainer = document.getElementById("right");
+        rightContainer.innerHTML = ""
+        rightContainer.innerHTML = `<h4>DELIVERY THURSDAY 27, JANUARY - TUESDAY 01, FEBRUARY</h4>`
+        cartItem.forEach(function(elem){
+            let div = document.createElement("div");
+            div.innerHTML = `<div>
+                <p>${elem.qty} ITEM</p>
+                <img src=${elem.imgUrl}>
+            </div>`
+            rightContainer.append(div);
+        })
+
+    }
+
+    document.getElementById("done").addEventListener("click",function(){
+        alert("THANK YOU FOR CHOOSING US")
+        window.location.href = 'index.html'
+    })
 </script>
