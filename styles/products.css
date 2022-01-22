@@ -1,0 +1,50 @@
+ * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .grid {
+        display: grid;
+      }
+
+      #main {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+        
+        width: 90%;
+        margin: 10% auto;
+      }
+
+      #main img {
+        height: 90%;
+        width: 100%;
+      }
+
+      #main > div {
+        margin-bottom: 5em;
+      }
+
+      #main > div p {
+        font-size: x-small;
+        font-weight: bold;
+        color: gray;
+      }
+
+      #main > div > div:nth-child(2)>div {
+        text-align: right;
+      }
+
+      .underline:hover{
+          cursor:pointer;
+          text-decoration:underline;
+          color:black !important;
+      }
+
+      #main > div > div:nth-child(2) > div > p:nth-child(2) {
+        background-color: yellow;
+      }
+
+      .flex {
+        display: flex;
+        justify-content: space-between;
+      }
