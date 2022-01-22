@@ -157,6 +157,7 @@ let query = JSON.parse(localStorage.getItem('search'))
 // product add to the local storage for carry forward to prod-info page
   function selectProd(elem) {
       localStorage.setItem("product",JSON.stringify(elem))
+      window.location.href='./product.html'
   }
 
 

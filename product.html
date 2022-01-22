@@ -153,7 +153,7 @@
         />
       </div>
       <div class="product_info_rightSide">
-        <div class="product_name">
+        <!-- <div class="product_name">
           <h2>CONTRAST PATCH JACKET</h2>
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlxF6EZhPKz6EhL_9Zf3-E3nn6y-aDwf2jDnmfQmBdTZc7TtSM5zshsfsEboujZ_JJOmg&usqp=CAU"
@@ -167,8 +167,8 @@
         </p>
         <p>₹ 6,990.00</p>
         <p>MRP incl. of all taxes</p>
-        <!-- <hr> -->
-        <div class="sizes">
+         <hr> -->
+        <!-- <div class="sizes">
           <p>M (UK M)</p>
           <p>L (UK L)</p>
           <p>XL (UK XL)</p>
@@ -180,8 +180,9 @@
         </div>
         <button>ADD TO BAG</button>
         <p>CHECK IN-STORE AVAILABILITY</p>
-        <p>DELIVERY, EXCHANGES AND RETURNS</p>
+        <p>DELIVERY, EXCHANGES AND RETURNS</p> -->
       </div>
+
     </div>
     <div id="footer"></div>
   </body>
@@ -194,4 +195,64 @@
   let footer_div = document.getElementById("footer");
   footer_div.innerHTML = footers();
   navbar_div.innerHTML = header();
+
+
+// imgUrl": "https://static.zara.net/photos///2021/I/1/2/p/2216/820/001/2/w/439/2216820001_6_1_1.jpg?ts=1625150699838",
+//       "prod_discount": "40% OFF",
+//       "prod_name": "MULTI-PIECE SNEAKERS",
+//       "strikedOffPrice": "₹ 3,590.00",
+//       "price": "₹ 1,990.00",
+//       "description
+  
+
+
+  let product = JSON.parse(localStorage.getItem("product"));
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+
+  document.querySelector('.image_div').innerHTML = ` <img
+          src=${product.imgUrl}
+          alt=""
+        />`
+
+
+  document.querySelector('.product_info_rightSide').innerHTML = ` <div class="product_name">
+          <h2>${product.prod_name}</h2>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlxF6EZhPKz6EhL_9Zf3-E3nn6y-aDwf2jDnmfQmBdTZc7TtSM5zshsfsEboujZ_JJOmg&usqp=CAU"
+            alt=""
+          />
+        </div>
+        <p>${product.description}
+          
+        </p>
+        <p>${product.price}</p>
+        <p>MRP incl. of all taxes</p>
+        <!-- <hr> -->
+        <div class="sizes">
+          <p>M (UK M)</p>
+          <p>L (UK L)</p>
+          <p>XL (UK XL)</p>
+        </div>
+
+        <div class="sizeScale">
+          <p>FIND YOUR SIZE</p>
+          <p>SIZE GUIDE</p>
+        </div>
+        <button id="addToCart">ADD TO BAG</button>
+        <p>CHECK IN-STORE AVAILABILITY</p>
+        <p>DELIVERY, EXCHANGES AND RETURNS</p>`
+
+        document.getElementById('addToCart').addEventListener('click',function() {
+            addCart()
+        })
+
+        function addCart(){
+            console.log('ere')
+
+            cart.push(product)
+            localStorage.setItem('cart',JSON.stringify(cart))
+        }
+
 </script>
