@@ -1,5 +1,7 @@
-#card>div{
-    margin-top: 18%;
+#cards>div{
+    position: fixed;
+    display: flex;
+    margin-left: 70%;
 }
 #store{
     border-bottom: 1px solid rgb(202, 202, 202);
@@ -30,10 +32,10 @@ input{
     margin-left: 37px;
 }
 @media only screen and (min-width:391px) and (max-width:768px){
-    #card>div{
-        display: flex;
-        margin-left: 43%;
-        margin-top: 40%;
+    #cards>div{
+        margin-left: 48%;
+        margin-top: 50%;
+        background-color: white;
     }
     #bottom{
         margin-left: 9%;
@@ -47,9 +49,10 @@ input{
     }
 }
 @media only screen and (min-width:0px) and (max-width:390px){
-    #card>div{
+    #cards>div{
         margin-left: 10%;
-        margin-top: 40%;
+        margin-top: 52%;
+        background-color: white;
     }
     button{
         width: 200px;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WOMENS'S JACKETS | ZARA</title>
     <link rel="stylesheet" href="style.css" />
     <style>
       * {
@@ -33,9 +33,9 @@
         </div>
         <div class="navbox3">
           <p class="menu_logo">VIEW ALL</p>
-          <p class="menu_logo">PLAIN</p>
-          <p class="menu_logo">PRINTED</p>
-          <p class="menu_logo">SHORT SLEEVE</p>
+          <p class="menu_logo">JACKETS</p>
+          <p class="menu_logo">OVERSHIRTS</p>
+          <p class="menu_logo">JOIN LIFE</p>
         </div>
         <div class="navbox4">
           <p class="search1">SEARCH</p>
@@ -69,11 +69,12 @@
 <script>
   async function getdata() {
     try {
-      let res = await fetch("women_jack_prod.json");
+      let res = await fetch("data.json");
 
       let data = await res.json();
 
-      appenddata(data);
+      let newdata = data.womenJacket;
+      appenddata(newdata);
 
       console.log("data:", data);
     } catch (err) {

@@ -57,6 +57,15 @@ nav{
     width: 60%;
     margin-right: 20px;
 }
+
+#items>div button{
+    padding:.2em .3em;
+    /* cursor: pointer; */
+    background-color: transparent;
+    border: none;
+    font-size: large;
+}
+
 .yellow{
     background-color: #ffe800;
     width: 90px;
@@ -78,7 +87,7 @@ nav{
     background-color: white;
     width: 99%;
     height: 80px;
-    position: sticky;
+    position: fixed;
     bottom: 0%;
 }
 #card>div>button{
@@ -95,4 +104,38 @@ nav{
     font-size: 13px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px){
+
+    #card>div{
+        display: flex;
+        margin-left: 48%;
+    }
+    #help{
+        width: 15%;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 390px){
+    #items{
+        display: block;
+        margin-left: 10%;
+    }
+    #items>div{
+        margin-bottom: 40px;
+        width: 330px;
+    }
+    #card{
+        border-top: 2px solid black;
+        position: fixed;
+    }
+    #card>div{
+        margin-left: 10%;
+    }
+    #help{
+        width: 27%;
+        margin-right: 2%;
+    }
 }
