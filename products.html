@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@200;300&family=Mulish:wght@200;400&family=PT+Sans&family=Pacifico&family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
@@ -90,84 +94,18 @@
 
 <script type="module">
 
-let query = JSON.parse(localStorage.getItem('search'))
-
-
-
   import { header } from "./components/header.js";
-
+  
   import { footers } from "./components/footer.js";
-
-//   navbar from the components import
-
+  
+  //   navbar from the components import
+  
   document.getElementById("navbar").innerHTML = header();
-
-  data();
-  async function data() {
-    let response = await fetch("./db/data.json");
-
-    let data = await response.json();
-
-
-    if(query == 'mensShoes'){
-    display(data.mensShoes);
-
-    }else if(query == 'mensShirt'){
-    display(data.mensShirt);
-
-    }else if(query == 'womenJacket'){
-    display(data.womenJacket);
-
-    }else if(query == 'womenAccessories'){
-    display(data.womenAccessories);
-
-    }
-    // console.log(data);
-    // console.log(data.query);
-    // console.log(query);
-
-  }
-
-  function display(data) {
-    let main = document.getElementById("main");
-
-    data.forEach(function (elem) {
-      let div = document.createElement("div");
-
-      div.innerHTML = ` <img src=${elem.imgUrl} alt="">
-
-           <div class="flex">
-               <p class='underline'>${elem.prod_name}</p>
-               <div>
-                   <p style="text-decoration:line-through">${elem.strikedOffPrice}</p>
-                   <p><span>${elem.prod_discount}</span>${elem.price}</p>
-               </div>
-           </div>`;
-
-           div.addEventListener("click", function (e) {
-               selectProd(elem)
-           })
-
-      main.appendChild(div);
-    });
-
-
-  }
-
-// product add to the local storage for carry forward to prod-info page
-  function selectProd(elem) {
-      localStorage.setItem("product",JSON.stringify(elem))
-      window.location.href='./product.html'
-  }
-
-
-//   footer from the components import
+  
+  //   footer from the components import
   document.getElementById("footer").innerHTML = footers();
-
-  // imgUrl": "https://static.zara.net/photos///2021/I/1/2/p/2216/820/001/2/w/439/2216820001_6_1_1.jpg?ts=1625150699838",
-  //   "prod_discount": "40% OFF",
-  //   "prod_name": "MULTI-PIECE SNEAKERS",
-  //   "strikedOffPrice": "₹ 3,590.00",
-  //   "price": "₹ 1,990.00",
-  //   "description
+  
+ 
 </script>
+
+<script src="./scripts/products.js"></script>

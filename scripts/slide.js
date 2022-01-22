@@ -49,4 +49,3 @@ $("#audio-control").click(function () {
   }
 });
 
-

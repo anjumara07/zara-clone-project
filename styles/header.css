@@ -150,10 +150,12 @@ nav ul ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
   margin-left: 30px;
 }
 #search-input {
-  font-size: 15px;
-  text-decoration: 3px underline;
-  margin-right: 50px;
-  padding-bottom: 10px;
+     font-size: 1.5em;
+    /* text-decoration: 3px underline; */
+    margin-right: 50px;
+    /* padding-bottom: 10px; */
+    padding-right: 30px;
+    border-bottom: 1px solid black;
 }
 
 * {

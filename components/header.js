@@ -5,7 +5,7 @@ function header() {
     <span class="fas fa-bars"></span>
   </div>
   <div class="logo">
-    <a href=""
+    <a href="./index.html"
       ><img
         height="140"
         width="280"

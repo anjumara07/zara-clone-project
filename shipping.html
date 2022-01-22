@@ -1,133 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Process Order - Delivery</title>
-    <link rel="stylesheet" href="./styles/navbar.css">
-    <link rel="stylesheet" href="./styles/shipping.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@200;300&family=Mulish:wght@200;400&family=PT+Sans&family=Pacifico&family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/shipping.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- navbar -->
     <nav id="navbar"></nav>
 
     <!-- body -->
     <div id="bottom">
-        <h2>CHOOSE YOUR SHIPPING METHOD</h2>
-        <h3>IN-STORE PICK UP</h3> 
-        <div id="store">
-            <p><input type="radio" name="delopt">MONDAY 24, JANUARY - WEDNESDAY 26, JANUARY</p>
-            <p>FREE</p>
-        </div>  
-        <h3>HOME DELIVERY</h3>
-        <div id="home">
-            <p>WEDNESDAY 26, JANUARY - MONDAY 31, JANUARY <span>290.00</span></p>
-            <input type="radio"  name="delopt" >
-            <div>
-                <p style="color: rgb(170, 169, 169);">TRANSPORT RESTRICTIONS MAY APPLY TO SOME AREAS</p>
-                <p style="color: rgb(170, 169, 169);">FREE SHIPPING FOR ORDERS OVER ₹ 2,990</p>
-                <a href="" style="color: rgb(121, 120, 120);">DELIVERY TIME FRAMES</a>
-            </div>
+      <h2>CHOOSE YOUR SHIPPING METHOD</h2>
+      <h3>IN-STORE PICK UP</h3>
+      <div id="store">
+        <p>
+          <input type="radio" name="delopt" />MONDAY 24, JANUARY - WEDNESDAY 26,
+          JANUARY
+        </p>
+        <p>FREE</p>
+      </div>
+      <h3>HOME DELIVERY</h3>
+      <div id="home">
+        <p>WEDNESDAY 26, JANUARY - MONDAY 31, JANUARY <span>290.00</span></p>
+        <input type="radio" name="delopt" />
+        <div>
+          <p style="color: rgb(170, 169, 169)">
+            TRANSPORT RESTRICTIONS MAY APPLY TO SOME AREAS
+          </p>
+          <p style="color: rgb(170, 169, 169)">
+            FREE SHIPPING FOR ORDERS OVER ₹ 2,990
+          </p>
+          <a href="" style="color: rgb(121, 120, 120)">DELIVERY TIME FRAMES</a>
         </div>
+      </div>
     </div>
 
     <div id="cards">
-        <div>
-            <div id="price">TOTAL :  <span>2,290.00</span></div>
-            <button onclick="window.location.href = 'payment.html' ">CONTINUE</button>
-        </div>
+      <div>
+        <div id="price">TOTAL : <span>2,290.00</span></div>
+        <button onclick="window.location.href = 'payment.html' ">
+          CONTINUE
+        </button>
+      </div>
     </div>
 
     <div id="footer"></div>
-</body>
+  </body>
 </html>
 
-<script type="module"> 
-    import navbar from "./components/navbar.js";
-    let nav = document.getElementById("navbar");
-    nav.innerHTML = navbar();
+<script type="module">
+  let total = JSON.parse(localStorage.getItem("total"));
+  document.getElementById("price").innerHTML = `TOTAL : <span>${total}</span>`;
 
-    import { footers } from "./components/footer.js";
-    let footer = document.getElementById("footer");
-    footer.innerHTML = footers();
+  import navbar from "./components/navbar.js";
+  let nav = document.getElementById("navbar");
+  nav.innerHTML = navbar();
 
-    let date = new Date()
-    // let day = date.getDate()
-    // let din = date.getDay()
-    // let month = date.getMonth()
-    // let year = date.getFullYear()
+  import { footers } from "./components/footer.js";
+  let footer = document.getElementById("footer");
+  footer.innerHTML = footers();
 
-   
+  let date = new Date();
+  // let day = date.getDate()
+  // let din = date.getDay()
+  // let month = date.getMonth()
+  // let year = date.getFullYear()
 
-    
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-    // let year = date.getFullYear();
-    let montht = months[date.getMonth()];
-    let datet = date.getDate();
-    let dayt = days[date.getDay()];
+  // let year = date.getFullYear();
+  let montht = months[date.getMonth()];
+  let datet = date.getDate();
+  let dayt = days[date.getDay()];
 
-    datet+=4
-    if(datet>30){
-        montht = months[date.getMonth()+1]
-        if(montht>12){
-            montht=months[0]
-        }
-   
+  datet += 4;
+  if (datet > 30) {
+    montht = months[date.getMonth() + 1];
+    if (montht > 12) {
+      montht = months[0];
     }
+  }
 
-    let din = date.getDay() + 4
-    console.log(din)
+  let din = date.getDay() + 4;
+  console.log(din);
 
-    console.log(din)
+  console.log(din);
 
-        if(din>6){
-            din = din-7
-        }
+  if (din > 6) {
+    din = din - 7;
+  }
 
-        din=days[din]
+  din = days[din];
 
-    console.log(montht,datet,din)
+  console.log(montht, datet, din);
 
-    
-  
+  document.getElementById(
+    "store"
+  ).innerHTML = `<p><input type="radio" name="delopt">${din} ${datet}, ${montht}</p>
+            <p>FREE</p>`;
 
-
-
-
-    document.getElementById('store').innerHTML = `<p><input type="radio" name="delopt">${din} ${datet}, ${montht}</p>
-            <p>FREE</p>`
-
-            document.getElementById('home').innerHTML = `<p>${din} ${datet}, ${montht} <span>290.00</span></p>
+  document.getElementById(
+    "home"
+  ).innerHTML = `<p>${din} ${datet}, ${montht} <span>290.00</span></p>
             <input type="radio"  name="delopt" >
             <div>
                 <p style="color: rgb(170, 169, 169);">TRANSPORT RESTRICTIONS MAY APPLY TO SOME AREAS</p>
                 <p style="color: rgb(170, 169, 169);">FREE SHIPPING FOR ORDERS OVER ₹ 2,990</p>
-                <a href="" style="color: rgb(121, 120, 120);">DELIVERY TIME FRAMES</a>`
-    
+                <a href="" style="color: rgb(121, 120, 120);">DELIVERY TIME FRAMES</a>`;
 </script>

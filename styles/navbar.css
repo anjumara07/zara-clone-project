@@ -15,8 +15,12 @@ nav{
     margin-left: 8%;
     margin-bottom: 10px;
 }
-#logo>img{
+#logo>a>img{
     width: 100%;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 #ship{
     width: 16%;
@@ -59,6 +63,12 @@ button{
     height: 40px;
     margin: 20px;
 }
+
+button:hover{
+    background-color: rgb(53, 53, 53);
+    cursor: pointer;
+}
+
 #price{
     font-size: 13px;
     font-weight: bold;
