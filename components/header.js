@@ -16,7 +16,7 @@ function header() {
 
     
     <span class="rightoptions">
-    <a href="">
+    <a href="./search.html">
     <p id="search-input">SEARCH</p></a>
       <a href="login.html">
         <p>LOG IN</p>
