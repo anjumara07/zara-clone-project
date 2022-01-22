@@ -14,24 +14,8 @@
     <nav id="navbar"></nav>
 
     <div id="main">
-        <div id="left">
-            <h4>DELIVERY</h4>
-            <div class="space">
-                <h5>STANDARD HOME SHIPPING · THURSDAY 27, JANUARY - TUESDAY 01, FEBRUARY</h5>
-                <p>TRANSPORT RESTRICTIONS MAY APPLY TO SOME AREAS</p>
-                <p><u>EDIT</u></p>
-            </div>
-            <div class="name">
-                <p>name</p>
-                <p>address</p>
-                <p>pincode</p>
-                <p>state</p>
-                <p>INDIA</p>
-                <p>number</p>
-            </div>
-            <h4 style="margin-top: 60px;">PAYMENT</h4>
-            <p><u>EDIT</u></p>
-        </div>
+        <div id="left"></div>
+
         <div id="right">
             <h4>DELIVERY THURSDAY 27, JANUARY - TUESDAY 01, FEBRUARY</h4>
             <div>
@@ -70,6 +54,29 @@
     footer.innerHTML = footers();
 
     let userData = JSON.parse(localStorage.getItem("userDataBase"));
+    appendUserDetails(userData)
 
-    
+    function appendUserDetails(userData){
+        let data = userData[userData.length-1];
+        let leftContainer = document.getElementById("left");
+        leftContainer.innerHTML = ""
+
+        leftContainer.innerHTML = `<h4>DELIVERY</h4>
+            <div class="space">
+                <h5>STANDARD HOME SHIPPING · THURSDAY 27, JANUARY - TUESDAY 01, FEBRUARY</h5>
+                <p>TRANSPORT RESTRICTIONS MAY APPLY TO SOME AREAS</p>
+                <p><u>EDIT</u></p>
+            </div>
+            <div class="name">
+                <p>${data.name}</p>
+                <p>${data.address}</p>
+                <p>${data.pin}</p>
+                <p>${data.state}</p>
+                <p>${data.stateR}</p>
+                <p>${data.tel}</p>
+            </div>
+            <h4 style="margin-top: 60px;">PAYMENT</h4>
+            <p><u>EDIT</u></p>`
+
+    }
 </script>
