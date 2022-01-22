@@ -21,7 +21,7 @@ function header() {
       <a href="login.html">
         <p>LOG IN</p>
       </a>
-      <a href="mainhelp.html">
+      <a href="zarahelp.html">
         <p>HELP</p>
       </a>
       <a href="shoppingBasket.html">
