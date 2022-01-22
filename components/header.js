@@ -18,13 +18,13 @@ function header() {
     <span class="rightoptions">
     <a href="">
     <p id="search-input">SEARCH</p></a>
-      <a href="">
+      <a href="./login-help-zara/login.html">
         <p>LOG IN</p>
       </a>
-      <a href="">
+      <a href="./login-help-zara/mainhelp.html">
         <p>HELP</p>
       </a>
-      <a href="">
+      <a href="shoppingBasket.html">
         <p>CART</p>
       </a>
     </span>
@@ -40,7 +40,7 @@ function header() {
         <a href="#" class="womensec">women</a>
         <ul class="womensec1">
           <li><a href="#">STARTING FROM 40%</a></li>
-          <li><a href="#">JACKETS | PUFFERS</a></li>
+          <li><a href="./ZARA-ROHIT/women_jackets.html">JACKETS | PUFFERS</a></li>
           <li>
             <a href="#">BLAZERS | COATS</a>
             <ul>
@@ -54,7 +54,7 @@ function header() {
               <li><a href="#">KNITWEAR</a></li>
               <li><a href="#">SHOES</a></li>
               <li><a href="#">BAGS</a></li>
-              <li><a href="#">ACCESSORIES</a></li>
+              <li><a href="./ZARA-ROHIT/women_accesories.html">ACCESSORIES</a></li>
             </ul>
           </li>
         </ul>
@@ -71,10 +71,10 @@ function header() {
             <a href="#">JACKETS | COATS</a>
             <ul>
               <li><a href="#">OVERSHIRTS</a></li>
-              <li><a href="#">SHIRTS</a></li>
+              <li><a href="./ZARA-ROHIT/mens_shirt.html">SHIRTS</a></li>
               <li><a href="#">T-SHIRTS | SWEATSHIRTS</a></li>
               <li><a href="#">TROUSERS | JEANS</a></li>
-              <li><a href="#">SHOES</a></li>
+              <li><a href="./ZARA-ROHIT/mens_shoes.html">SHOES</a></li>
               <li><a href="#">BAGS | BACKPACKS</a></li>
               <li><a href="#">ACCESSORIES</a></li>
               <li><a href="#">ZARA ATHLETICS</a></li>
