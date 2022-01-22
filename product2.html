@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZARA India | New Collection Online</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      .navbar_rb {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="navbar_rb">
+        <div class="navbox1">
+          <img
+            class="icon1"
+            src="https://media.istockphoto.com/vectors/hamburger-menu-bar-icon-flat-vector-illustration-design-vector-id1162202704?b=1&k=20&m=1162202704&s=170667a&w=0&h=OSBmghEA7slZNlfepm1-4SRogj20Utt7a5PsCBl8wfQ="
+            alt=""
+          />
+        </div>
+        <div class="navbox2">
+          <img
+            class="logo1"
+            src="https://logodownload.org/wp-content/uploads/2014/05/zara-logo-1.png"
+            alt=""
+          />
+        </div>
+        <div class="navbox4 box4">
+          <p class="search1">SEARCH</p>
+        </div>
+        <div class="navbox5 box5">
+          <p class="menu_logo">LOG IN</p>
+          <p class="menu_logo">HELP</p>
+          <p class="menu_logo">CART (0)</p>
+        </div>
+      </div>
+      <div class="body_rb2">
+        <div class="left_div">
+          <p class="head_1">MATERIALS, CARE AND ORIGIN</p>
+          <p class="head_2">MATERIALS</p>
+          <p class="head_3">
+            We work with monitoring programmes to ensure compliance with safety,
+            health and quality standards for our products.
+          </p>
+          <p class="head_3">
+            The Green to Wear 2.0 standard aims to minimise the environmental
+            impact of textile manufacturing. To that end, we have developed
+            Inditex’s The List programme, which helps guarantee both that
+            production processes are clean and that our garments are safe and
+            healthy.
+          </p>
+        </div>
+        <div class="center_div">
+          <div id="slideShow2">
+            <img
+              id="center_img"
+              src="https://static.zara.net/photos///2021/I/0/1/p/3717/310/250/602/w/850/3717310250_1_1_1.jpg?ts=1637664032242"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="right_div">
+          <p class="right_head1">CONTRAST PRINT SHIRT</p>
+          <p class="right_head2">
+            RELAXED FIT COLLARED SHIRT FEATURING LONG SLEEVES WITH BUTTONED
+            CUFFS. CONTRAST SLOGAN PRINT AND GRAPHIC AT THE HIP. BUTTON-UP
+            FRONT.
+          </p>
+          <div class="price_div">
+            <p class="old_price">₹ 2,990.00</p>
+            <p class="new_price">₹ 1,290.00</p>
+          </div>
+          <p class="mrp">MRP incl. of all taxes</p>
+          <p class="prod_color">Colour White | 3717/310</p>
+          <hr />
+          <div class="size">
+            <form>
+              <input type="radio" id="S" name="fav_language" value="S" />
+              <label for="S">S (UK S)</label><br />
+              <input type="radio" id="M" name="fav_language" value="M" />
+              <label for="M">M (UK M)</label><br />
+              <input type="radio" id="X" name="fav_language" value="X" />
+              <label for="X">L (UK L)</label><br />
+              <input type="radio" id="XL" name="fav_language" value="XL" />
+              <label for="XL">XL (UK XL)</label>
+            </form>
+          </div>
+          <hr />
+          <div class="size2">
+            <p>Find your size ?</p>
+            <p class="size3">Size guide</p>
+          </div>
+          <button class="bag_btn">Add to bag</button>
+          <div class="extras">
+            <p>Check in-store availability</p>
+            <p>Delivery, Exchange and Returns</p>
+            <p>Share</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // async function getdata() {
+  //   try {
+  //     let res = await fetch("shirt_prod_data.json");
+
+  //     let data = await res.json();
+
+  //     appenddata(data);
+
+  //     console.log("data:", data);
+  //   } catch (err) {
+  //     console.log("err:", err);
+  //   }
+  // }
+
+  // getdata();
+
+  // function appenddata(arr) {
+  //   arr.forEach((elem) => {
+  //     let shirt_prod_name = document.querySelector(".right_head1");
+  //     shirt_prod_name.textContent = elem.prod_name;
+
+  //     // let img = document.createElement("img");
+  //     // img.setAttribute("src", elem.imgUrl);
+  //     // img.setAttribute("id", "product_image");
+
+  //     // let shirt_img_div = document.querySelector("#slideShow2");
+  //     // shirt_img_div.append(img);
+  //   });
+  // }
+
+  let id;
+
+  function start() {
+    var div = document.getElementById("slideShow2");
+
+    div.innerHTML = null;
+
+    let images = [
+      [
+        "https://static.zara.net/photos///2021/I/0/1/p/3717/310/250/602/w/850/3717310250_2_2_1.jpg?ts=1637664027845",
+      ],
+      [
+        "https://static.zara.net/photos///2021/I/0/1/p/3717/310/250/602/w/850/3717310250_2_4_1.jpg?ts=1637664026723",
+      ],
+      [
+        "https://static.zara.net/photos///2021/I/0/1/p/3717/310/250/602/w/850/3717310250_2_7_1.jpg?ts=1637664042449",
+      ],
+      [
+        "https://static.zara.net/photos///2021/I/0/1/p/3717/310/250/602/w/850/3717310250_2_1_1.jpg?ts=1637664033776",
+      ],
+      [
+        "https://static.zara.net/photos///2021/I/0/2/p/3717/310/250/2/w/850/3717310250_6_1_1.jpg?ts=1626173705782",
+      ],
+    ];
+
+    let img = document.createElement("img");
+    img.setAttribute("id", "center_img");
+    img.src = images[0];
+    div.append(img);
+
+    let i = 1;
+
+    id = setInterval(function () {
+      if (i === images.length) {
+        i = 0;
+      }
+      img.src = images[i];
+
+      div.append(img);
+
+      i++;
+    }, 4000);
+  }
+
+  setTimeout(() => {
+    start();
+  }, 4000);
+</script>
