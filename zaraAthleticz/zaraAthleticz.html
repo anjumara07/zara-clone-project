@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATHLETICZ COLLECTION|ZARA India</title>
+    <style>
+      body {
+        background-color: black;
+        font-family: Neue-Helvetica, Helvetica, Arial, sans-serif;
+        color: white;
+      }
+
+      #img {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        margin-top: 150px;
+      }
+
+      #img > div {
+        width: 50%;
+        height: 100%;
+        color: white;
+        font-family: Neue-Helvetica, Helvetica, Arial, sans-serif;
+      }
+
+      #img > div > h1 {
+        font-size: 65px;
+        color: white;
+      }
+
+      #nav {
+        color: white;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        position: fixed;
+        top: 0;
+      }
+
+      #nav > h2 {
+        width: 800px;
+        margin-left: 100px;
+      }
+
+      #nav > h4 {
+        text-decoration: underline;
+        margin-top: 17px;
+      }
+
+      #nav > p {
+        font-size: 10px;
+        margin-top: 20px;
+      }
+
+      #img > div > h1 {
+        margin: 0;
+      }
+
+      #img > div > h1 > sup {
+        font-size: 40px;
+      }
+
+      .h1 {
+        text-align: center;
+
+        font-size: 65px;
+        margin-top: 100px;
+      }
+
+      h1 > a {
+        color: white;
+        text-decoration: none;
+      }
+
+      * {
+        margin: 0;
+        font-family: Helvetica;
+      }
+      .body_rb {
+        margin-left: 2.5em;
+        margin-top: 5em;
+      }
+      #body_div {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+      }
+      #product_image {
+        width: 93%;
+        margin-bottom: 2em;
+        border-radius: 5px;
+      }
+      #product_image:hover {
+        transform: scale(1.1);
+        transition: 0.75s;
+      }
+      #small_div {
+        display: flex;
+        margin-top: 0.5em;
+        font-weight: bold;
+      }
+      #strike {
+        text-decoration: line-through;
+        padding: 5px;
+        font-weight: bold;
+      }
+      #actual_price {
+        margin-left: 0.5em;
+        background-color: rgb(255, 232, 0);
+        padding: 5px;
+        color: black;
+        font-weight: bold;
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        margin-top: 1em;
+        border: 0;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        margin-bottom: 5em;
+        font-weight: bold;
+      }
+      button:hover {
+        background-color: wheat;
+        color: black;
+        transition: background-color 1s;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="nav">
+      <h2>ZARA ATHLETICZ</h2>
+      <h4>
+        <a style="color: white" href="">SEARCH</a>
+      </h4>
+      <p>LOGIN</p>
+      <p>HELP</p>
+      <p>CART</p>
+    </div>
+    <div id="img">
+      <div>
+        <img
+          src="https://static.zara.net/photos///2021/I/M/1/p/0000/002/476/2/w/530/0000002476_15_1_1.jpg?ts=1633359786073"
+          ,width="570px"
+          height="500px"
+        />
+      </div>
+      <div>
+        <h1><a href="#shirts">T-SHIRTS </a> <sup>26</sup></h1>
+        <h1><a href="#short">SHORTS</a> <sup>12</sup></h1>
+        <h1><a href="#trou">TROUSERS</a> <sup>9</sup></h1>
+        <h1><a href="#sweat">SWEATSHIRTS</a> <sup>8</sup></h1>
+        <h1><a href="#out">OUTDOORS</a> <sup>3</sup></h1>
+        <h1><a href="#access">ACCESSORIES</a> <sup>17</sup></h1>
+        <h1><a href="#shoe">SHOES</a> <sup>8</sup></h1>
+      </div>
+    </div>
+    <div class="body_rb">
+      <div id="body_div"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  async function getdata() {
+    try {
+      let res = await fetch("menshoes_data.json");
+
+      let data = await res.json();
+
+      appenddata(data);
+
+      console.log("data:", data);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  getdata();
+
+  function appenddata(arr) {
+    arr.forEach((elem) => {
+      let mainDiv = document.createElement("div");
+      mainDiv.setAttribute("id", "main_div2");
+
+      let img = document.createElement("img");
+      img.setAttribute("src", elem.imgUrl);
+      img.setAttribute("id", "product_image");
+
+      let aTag = document.createElement("a");
+      aTag.setAttribute("href", "product2.html");
+
+      let buy_btn = document.createElement("button");
+      buy_btn.textContent = "Buy Now";
+      aTag.innerHTML = "<button>Buy Now</button>";
+      // buy_btn.setAttribute("id","buy_btn1")
+
+      let discount = document.createElement("p");
+      discount.textContent = elem.prod_discount;
+
+      let prod_name = document.createElement("P");
+      prod_name.textContent = elem.prod_name;
+      prod_name.setAttribute("id", "item_name");
+
+      let smallDiv = document.createElement("div");
+      smallDiv.setAttribute("id", "small_div");
+
+      let price = document.createElement("p");
+      price.textContent = elem.price;
+      price.setAttribute("id", "actual_price");
+
+      let strikedOffPrice = document.createElement("p");
+      strikedOffPrice.textContent = elem.strikedOffPrice;
+      strikedOffPrice.setAttribute("id", "strike");
+
+      smallDiv.append(strikedOffPrice, price);
+
+      mainDiv.append(img, discount, prod_name, smallDiv, aTag);
+
+      document.getElementById("body_div").append(mainDiv);
+    });
+  }
+</script>
+<script>
+  async function getdata() {
+    try {
+      let res = await fetch("women_jack_prod.json");
+
+      let data = await res.json();
+
+      appenddata(data);
+
+      console.log("data:", data);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  getdata();
+
+  function appenddata(arr) {
+    arr.forEach((elem) => {
+      let mainDiv = document.createElement("div");
+      mainDiv.setAttribute("id", "main_div2");
+
+      let img = document.createElement("img");
+      img.setAttribute("src", elem.imgUrl);
+      img.setAttribute("id", "product_image");
+
+      let aTag = document.createElement("a");
+      aTag.setAttribute("href", "product2.html");
+
+      let buy_btn = document.createElement("button");
+      buy_btn.textContent = "Buy Now";
+      aTag.innerHTML = "<button>Buy Now</button>";
+      // buy_btn.setAttribute("id","buy_btn1")
+
+      let discount = document.createElement("p");
+      discount.textContent = elem.prod_discount;
+
+      let prod_name = document.createElement("P");
+      prod_name.textContent = elem.prod_name;
+      prod_name.setAttribute("id", "item_name");
+
+      let smallDiv = document.createElement("div");
+      smallDiv.setAttribute("id", "small_div");
+
+      let price = document.createElement("p");
+      price.textContent = elem.price;
+      price.setAttribute("id", "actual_price");
+
+      let strikedOffPrice = document.createElement("p");
+      strikedOffPrice.textContent = elem.strikedOffPrice;
+      strikedOffPrice.setAttribute("id", "strike");
+
+      smallDiv.append(strikedOffPrice, price);
+
+      mainDiv.append(img, discount, prod_name, smallDiv, aTag);
+
+      document.getElementById("body_div").append(mainDiv);
+    });
+  }
+</script>
+
+<script>
+  async function getdata() {
+    try {
+      let res = await fetch("women_acce_prod.json");
+
+      let data = await res.json();
+
+      appenddata(data);
+
+      console.log("data:", data);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  getdata();
+
+  function appenddata(arr) {
+    arr.forEach((elem) => {
+      let mainDiv = document.createElement("div");
+      mainDiv.setAttribute("id", "main_div2");
+
+      let img = document.createElement("img");
+      img.setAttribute("src", elem.imgUrl);
+      img.setAttribute("id", "product_image");
+
+      let aTag = document.createElement("a");
+      aTag.setAttribute("href", "product2.html");
+
+      let buy_btn = document.createElement("button");
+      buy_btn.textContent = "Buy Now";
+      aTag.innerHTML = "<button>Buy Now</button>";
+      // buy_btn.setAttribute("id","buy_btn1")
+
+      let discount = document.createElement("p");
+      discount.textContent = elem.prod_discount;
+
+      let prod_name = document.createElement("P");
+      prod_name.textContent = elem.prod_name;
+      prod_name.setAttribute("id", "item_name");
+
+      let smallDiv = document.createElement("div");
+      smallDiv.setAttribute("id", "small_div");
+
+      let price = document.createElement("p");
+      price.textContent = elem.price;
+      price.setAttribute("id", "actual_price");
+
+      let strikedOffPrice = document.createElement("p");
+      strikedOffPrice.textContent = elem.strikedOffPrice;
+      strikedOffPrice.setAttribute("id", "strike");
+
+      smallDiv.append(strikedOffPrice, price);
+
+      mainDiv.append(img, discount, prod_name, smallDiv, aTag);
+
+      document.getElementById("body_div").append(mainDiv);
+    });
+  }
+</script>
+
+<script>
+  async function getdata() {
+    try {
+      let res = await fetch("shirt_prod_data.json");
+
+      let data = await res.json();
+
+      appenddata(data);
+
+      console.log("data:", data);
+    } catch (err) {
+      console.log("err:", err);
+    }
+  }
+
+  getdata();
+
+  function appenddata(arr) {
+    arr.forEach((elem) => {
+      let mainDiv = document.createElement("div");
+      mainDiv.setAttribute("id", "main_div2");
+
+      let img = document.createElement("img");
+      img.setAttribute("src", elem.imgUrl);
+      img.setAttribute("id", "product_image");
+
+      let aTag = document.createElement("a");
+      aTag.setAttribute("href", "product2.html");
+
+      let buy_btn = document.createElement("button");
+      buy_btn.textContent = "Buy Now";
+      aTag.innerHTML = "<button>Buy Now</button>";
+      // buy_btn.setAttribute("id","buy_btn1")
+
+      let discount = document.createElement("p");
+      discount.textContent = elem.prod_discount;
+
+      let prod_name = document.createElement("P");
+      prod_name.textContent = elem.prod_name;
+      prod_name.setAttribute("id", "item_name");
+
+      let smallDiv = document.createElement("div");
+      smallDiv.setAttribute("id", "small_div");
+
+      let price = document.createElement("p");
+      price.textContent = elem.price;
+      price.setAttribute("id", "actual_price");
+
+      let strikedOffPrice = document.createElement("p");
+      strikedOffPrice.textContent = elem.strikedOffPrice;
+      strikedOffPrice.setAttribute("id", "strike");
+
+      smallDiv.append(strikedOffPrice, price);
+
+      mainDiv.append(img, discount, prod_name, smallDiv, aTag);
+
+      document.getElementById("body_div").append(mainDiv);
+    });
+  }
+</script>
