@@ -83,6 +83,11 @@
 </html>
 
 <script type="module">
+
+let query = JSON.parse(localStorage.getItem('search'))
+
+
+
   import { header } from "./components/header.js";
 
   import { footers } from "./components/footer.js";
@@ -97,9 +102,24 @@
 
     let data = await response.json();
 
-    console.log(data);
 
+    if(query == 'mensShoes'){
     display(data.mensShoes);
+
+    }else if(query == 'mensShirt'){
+    display(data.mensShirt);
+
+    }else if(query == 'womenJacket'){
+    display(data.womenJacket);
+
+    }else if(query == 'womenAccessories'){
+    display(data.womenAccessories);
+
+    }
+    // console.log(data);
+    // console.log(data.query);
+    // console.log(query);
+
   }
 
   function display(data) {

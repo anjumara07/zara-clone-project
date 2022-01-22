@@ -81,7 +81,7 @@ nav ul {
   list-style: none;
 }
 
-a {
+a,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz {
   color: #000000;
   user-select: none;
   box-sizing: border-box;
@@ -98,7 +98,7 @@ nav ul li {
   line-height: 20px;
 }
 
-nav ul li a {
+nav ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
   position: relative;
   color: black;
   text-decoration: none;
@@ -129,7 +129,7 @@ nav ul ul li {
   line-height: 42px;
 }
 
-nav ul ul li a {
+nav ul ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
   font-size: 15px;
   color: black;
   background-color: gold;
