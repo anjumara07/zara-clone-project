@@ -54,7 +54,7 @@ function header() {
               <li><a href="#">KNITWEAR</a></li>
               <li><a href="#">SHOES</a></li>
               <li><a href="#">BAGS</a></li>
-              <li><a href="women_accesories.html">ACCESSORIES</a></li>
+              <li id="womenAcc">ACCESSORIES</a></li>
             </ul>
           </li>
         </ul>
