@@ -12,7 +12,7 @@ function navbar(){
      </div>
 
     <div id="help">
-        <div>ANJUM</div>
+        <div>LOGIN</div>
         <div>HELP</div>
     </div>`
 }
