@@ -39,7 +39,7 @@
 .logo img {
   padding: 2px 0px 0px;
   display: inline;
-  margin-left: 14%;
+  margin-left: 6%;
   /* top: 26px; */
 
   margin-top: -75px;
@@ -92,6 +92,7 @@ a,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz {
   font-size: 10px;
   line-height: 26px;
   font-stretch: semi-condensed;
+  cursor: pointer;
 }
 
 nav ul li {
