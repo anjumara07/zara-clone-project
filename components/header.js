@@ -77,7 +77,7 @@ function header() {
               <li><a href="mens_shoes.html">SHOES</a></li>
               <li><a href="#">BAGS | BACKPACKS</a></li>
               <li><a href="#">ACCESSORIES</a></li>
-              <li><a href="#">ZARA ATHLETICS</a></li>
+              <li><a href="zaraAthleticz.html">ZARA ATHLETICS</a></li>
             </ul>
           </li>
         </ul>
