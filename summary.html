@@ -26,7 +26,7 @@
         </div>
         <div id="pr">
             <div id="price">TOTAL :  <span>2,290.00</span></div>
-            <button onclick="window.location.href = 'summary.html' ">CONTINUE</button>
+            <button id="done">CONTINUE</button>
         </div>
     </div>
 
@@ -83,4 +83,9 @@
         })
 
     }
+
+    document.getElementById("done").addEventListener("click",function(){
+        alert("THANK YOU FOR CHOOSING US")
+        window.location.href = 'index.html'
+    })
 </script>
