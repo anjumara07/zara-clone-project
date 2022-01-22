@@ -51,6 +51,12 @@
         text-align: right;
       }
 
+      .underline:hover{
+          cursor:pointer;
+          text-decoration:underline;
+          color:black !important;
+      }
+
       #main > div > div:nth-child(2) > div > p:nth-child(2) {
         background-color: yellow;
       }
@@ -131,7 +137,7 @@ let query = JSON.parse(localStorage.getItem('search'))
       div.innerHTML = ` <img src=${elem.imgUrl} alt="">
 
            <div class="flex">
-               <p>${elem.prod_name}</p>
+               <p class='underline'>${elem.prod_name}</p>
                <div>
                    <p style="text-decoration:line-through">${elem.strikedOffPrice}</p>
                    <p><span>${elem.prod_discount}</span>${elem.price}</p>
