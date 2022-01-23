@@ -16,11 +16,13 @@ function logInBtn(event) {
 
   for (var i = 0; i < userData.length; i++) {
     if (userData[i].email == email && userData[i].password == password) {
-      window.location.href = "shipping.html";
-      count++;
+      count = 1;
     }
   }
-  if (count == 0) {
-    alert("Please Check your email and password");
+  if (count == 1) {
+    alert("Login Successful");
+    window.location.href = "shipping.html";
+  } else {
+    alert("Invalid Credentials");
   }
 }

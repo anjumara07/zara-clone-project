@@ -10,9 +10,9 @@ setTimeout(() => {
   document.getElementById("menShirts").addEventListener("click", function () {
     transfer("mensShirt");
   });
-  // document.getElementById('athleticz').addEventListener("click", function(){
-  //   transfer('')
-  // })
+  document.getElementById("athleticz").addEventListener("click", function () {
+    window.location.href = "zaraAthleticz.html";
+  });
   document.getElementById("menShoes").addEventListener("click", function () {
     transfer("mensShoes");
   });
