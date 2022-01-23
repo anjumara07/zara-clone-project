@@ -16,7 +16,7 @@ function logInBtn(event) {
 
   for (var i = 0; i < userData.length; i++) {
     if (userData[i].email == email && userData[i].password == password) {
-      window.location.href = "index.html";
+      window.location.href = "shipping.html";
       count++;
     }
   }
