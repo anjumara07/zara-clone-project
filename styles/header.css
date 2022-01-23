@@ -81,7 +81,12 @@ nav ul {
   list-style: none;
 }
 
-a,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz {
+a,
+#womenJacks,
+#womenAcc,
+#menShirts,
+#menShoes,
+#athleticz {
   color: #000000;
   user-select: none;
   box-sizing: border-box;
@@ -99,7 +104,12 @@ nav ul li {
   line-height: 20px;
 }
 
-nav ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
+nav ul li a,
+#womenJacks,
+#womenAcc,
+#menShirts,
+#menShoes,
+#athleticz {
   position: relative;
   color: black;
   text-decoration: none;
@@ -130,7 +140,12 @@ nav ul ul li {
   line-height: 42px;
 }
 
-nav ul ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
+nav ul ul li a,
+#womenJacks,
+#womenAcc,
+#menShirts,
+#menShoes,
+#athleticz {
   font-size: 15px;
   color: black;
   background-color: gold;
@@ -150,12 +165,12 @@ nav ul ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
   margin-left: 30px;
 }
 #search-input {
-     font-size: 1.5em;
-    /* text-decoration: 3px underline; */
-    margin-right: 50px;
-    /* padding-bottom: 10px; */
-    padding-right: 30px;
-    border-bottom: 1px solid black;
+  font-size: 1.5em;
+  /* text-decoration: 3px underline; */
+  margin-right: 50px;
+  /* padding-bottom: 10px; */
+  padding-right: 30px;
+  border-bottom: 1px solid black;
 }
 
 * {
@@ -248,7 +263,7 @@ nav ul ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
   .next,
   .text {
     font-size: 11px;
-  }  
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -266,12 +281,37 @@ nav ul ul li a ,#womenJacks,#womenAcc,#menShirts,#menShoes,#athleticz  {
     margin-left: 25%;
     margin-bottom: 15%;
   }
-  .rightoptions p,#search-input{
+  .rightoptions p,
+  #search-input {
     font-size: 20px;
   }
-  #footer a{
+  #footer a {
     font-size: 13px;
   }
+
+  nav ul li a,
+  #womenJacks,
+  #womenAcc,
+  #menShirts,
+  #menShoes,
+  #athleticz {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 1.5em;
+    padding-left: 79px;
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul li a, #womenJacks, #womenAcc, #menShirts, #menShoes, #athleticz {
+    font-size: 35px;
+    color: black;
+    background-color: gold;
+    padding-left: 70px;
+    line-height: 1.5em;
+}
 }
 #sale {
   margin-top: -20%;

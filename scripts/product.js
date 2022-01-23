@@ -45,4 +45,26 @@ function addCart() {
 
   cart.push(product);
   localStorage.setItem("cart", JSON.stringify(cart));
+  // let arr = JSON.parse(localStorage.getItem("cart"));
+
+  let main = document.getElementById("popupmain");
+  main.innerHTML =null
+  
+
+  cart.forEach( (elem) => {
+    let div = document.createElement("div");
+    div.innerHTML = `<div class="flex">
+          <img src=${elem.imgUrl} alt="">
+          <div><div>${elem.prod_name}</div>
+          <div>${elem.price}</div></div>
+        </div>`;
+
+    main.append(div);
+  });
+
+  document.getElementById("popup").classList.remove("none");
+}
+
+function closepop() {
+  document.querySelector(".popup").classList.add("none");
 }
