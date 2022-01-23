@@ -44,13 +44,13 @@ Our website is responsive as well.
 
 2. Divyansh Singh Sikarwar : https://github.com/divyansh050
 
-3. Himanshu Sharma : 
+3. Himanshu Sharma : https://github.com/sharmahimansh007
 
-4. Hitendra Mali : 
+4. Hitendra Mali : https://github.com/h1t3ndr4
 
-5. Rohit : 
+5. Rohit : https://github.com/Rohitb1107
 
-6. Babli kumari : 
+6. Babli kumari : https://github.com/bablikumari2
 
 
 ## Our blog link :
