@@ -63,7 +63,7 @@ function header() {
 
 
       <li>
-        <a href="#" class="mensec">man</a>
+        <a href="#" class="mensec">men</a>
         <ul class="mensec1">
           <li><a href="#">STARTING FROM -60%</a></li>
           <li><a href="#">STARTING FROM -40%</a></li>
