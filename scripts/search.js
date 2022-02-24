@@ -157,4 +157,5 @@ function shoes(event) {
 function selectProd(elem) {
   localStorage.setItem("product", JSON.stringify(elem));
   window.location.href = "./product.html";
+  
 }
