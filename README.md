@@ -6,9 +6,11 @@ This project is a clone of ZARA.com which is well known online shopping store. T
 
 The tech Stack we used for creating this website are :-
 
-1. HTML 
-2. CSS
-3. Javascript
+<img src="https://cdn-icons-png.flaticon.com/512/226/226269.png" width=20/> HTML
+
+<img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width=20 /> CSS
+
+<img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" width=20/> JavaScript
 
 
 ## Landing Page :
@@ -34,23 +36,22 @@ In below image you can see Login and Create Account page. We used some JavaScrip
 We have added different payment methods, users can choose according to there preference, and after selecting any method it will redirect users to final payment page.
 
 
-
 ## Responsive :
 Our website is responsive as well.
 
 ## Contributors :
 
-1. Anjum Ara : https://github.com/anjumara07
+- Anjum Ara : https://github.com/anjumara07
 
-2. Divyansh Singh Sikarwar : https://github.com/divyansh050
+- Divyansh Singh Sikarwar : https://github.com/divyansh050
 
-3. Himanshu Sharma : https://github.com/sharmahimansh007
+- Hitendra Mali : https://github.com/h1t3ndr4
 
-4. Hitendra Mali : https://github.com/h1t3ndr4
+- Himanshu Sharma : https://github.com/sharmahimansh007
 
-5. Rohit : https://github.com/Rohitb1107
+- Babli kumari : https://github.com/bablikumari2
 
-6. Babli kumari : https://github.com/bablikumari2
+- Rohit : https://github.com/Rohitb1107
 
 
 ## Our blog link :
